@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfAppText.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppText"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="Aquamarine">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" Orientation="Horizontal" Margin="10" Background="Aquamarine">
+            <TextBox x:Name="PathTextB" Margin="5 15 0 10" Height="40" Width="120" />
+            <Button x:Name="Open" Content="Open" Click="OpenBtn"  Height="40" Width="40" Background="YellowGreen" FontWeight="Bold"  Margin="0 15 0 10"/>
+            <Button x:Name="Save" Content="Save" Click="SaveBtn"  Height="40" Width="55" Background="YellowGreen" FontWeight="Bold"  Margin="35 15 0 10"/>
+            <StackPanel Margin="35 15 0 10" Background="YellowGreen">
+                <CheckBox x:Name="ChekBox" VerticalContentAlignment="Center" FontSize="12" Margin="20 0"></CheckBox>
+                <Label Content="Avtosave" FontWeight="Bold" Margin="0 -5 0 0"/>
+            </StackPanel>
+            <Button x:Name="Cut" Content="Cut" Click="CutBtn"  Height="40" Width="55" Background="YellowGreen" FontWeight="Bold"  Margin="35 15 0 10"/>
+            <Button x:Name="Copy" Content="Copy" Click="CopyBtn"  Height="40" Width="55" Background="YellowGreen" FontWeight="Bold"  Margin="35 15 0 10"/>
+            <Button x:Name="Paste" Content="Paste" Click="PasteBtn"  Height="40" Width="55" Background="YellowGreen" FontWeight="Bold"  Margin="35 15 0 10"/>
+            <Button x:Name="Selectall" Content="Select all" Click="SelectallBtn"  Height="40" Width="70" Background="YellowGreen" FontWeight="Bold"  Margin="35 15 0 10"/>
+        </WrapPanel>
+        <TextBox Grid.Row="1" Margin="10" Name="NoteTextB" TextChanged="changed"></TextBox>
+    </Grid>
+</Window>
